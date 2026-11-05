@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Abir Auto World — buy, sell and exchange quality pre-owned cars in Kolkata. Assistance with vehicle documentation and ownership transfer.">
+  <title>Abir Auto World | Buy • Sell • Exchange Pre-Owned Cars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#14202b;--muted:#63717d;--paper:#f5f7f8;--white:#fff;--red:#e34b3d;--navy:#102333;--line:#e5eaee;--gold:#e9b65b}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .top{background:#0a1924;color:#d7e0e7;font-size:13px;padding:10px 0}.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{background:var(--navy);color:white;position:relative;overflow:hidden}
+    nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.5px}
+    .logo{width:42px;height:42px;border-radius:12px;background:var(--red);display:grid;place-items:center;font-size:21px}
+    .brand small{display:block;font:500 10px "DM Sans";letter-spacing:2px;color:#b7c6d1;margin-top:2px}
+    .navlinks{display:flex;gap:25px;font-size:14px;color:#d5dfe6}.navlinks a:hover{color:white}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:8px;padding:13px 18px;background:var(--red);color:white;font-weight:700;font-size:14px}
+    .hero{padding:78px 0 86px;position:relative}.hero:after{content:"";position:absolute;right:-100px;top:20px;width:550px;height:340px;border:1px solid #ffffff18;border-radius:50%;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
+    .eyebrow{color:#ffb9ae;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+    h1,h2,h3{font-family:Manrope,sans-serif;letter-spacing:-1px}h1{font-size:clamp(38px,5vw,64px);line-height:1.08;max-width:700px;margin:17px 0}
+    .hero p{color:#c4d0d9;font-size:18px;line-height:1.7;max-width:590px;margin:0 0 27px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn.outline{background:transparent;border:1px solid #ffffff55}.hero-note{margin-top:30px;color:#a9bac6;font-size:13px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#dfe5e9;border:1px solid #dfe5e9;border-radius:12px;overflow:hidden;margin-top:-28px;position:relative;z-index:2}
+    .stat{background:white;padding:22px 25px}.stat strong{display:block;font:800 22px Manrope}.stat span{font-size:13px;color:var(--muted)}
+    section{padding:76px 0}.section-head{max-width:680px;margin-bottom:32px}.kicker{color:var(--red);font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
+    h2{font-size:clamp(29px,3.5vw,42px);margin:10px 0 12px}.section-head p,.lead{color:var(--muted);line-height:1.75;margin:0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{background:white;border:1px solid var(--line);border-radius:13px;padding:25px;min-height:190px}
+    .ico{width:43px;height:43px;border-radius:11px;background:#fff0ee;color:var(--red);display:grid;place-items:center;font-size:20px;margin-bottom:18px}
+    .service h3{font-size:19px;margin:0 0 8px}.service p{color:var(--muted);font-size:14px;line-height:1.65;margin:0}
+    .docs{background:#102333;color:white}.docs .section-head p{color:#bdcbd5}
+    .doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.doc-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .doc{padding:17px;border:1px solid #ffffff24;border-radius:10px;color:#e4edf2;font-size:14px}.doc b{display:block;margin-bottom:5px;color:white}
+    .disclaimer{font-size:12px;line-height:1.6;color:#aebfc9;margin-top:16px}
+    .listings{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.car{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+    .car-art{height:175px;background:linear-gradient(135deg,#dce5ea,#f5f7f8);display:grid;place-items:center;font-size:64px}
+    .car-body{padding:21px}.tag{display:inline-block;background:#fff0ee;color:#b83a30;border-radius:30px;padding:5px 10px;font-size:11px;font-weight:800}
+    .car h3{font-size:21px;margin:12px 0 7px}.price{font:800 22px Manrope;color:var(--red)}
+    .meta{display:flex;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin:12px 0 18px}
+    .car .btn{width:100%;padding:11px}.listing-note{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.6}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:white;border:1px solid var(--line);padding:22px;border-radius:12px}.num{font:800 12px Manrope;color:var(--red)}.step h3{font-size:17px;margin:10px 0 7px}.step p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+    .contact{background:#f0e9e5}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.contact-card{background:white;padding:27px;border-radius:14px;border:1px solid #eaded8}
+    .contact-line{padding:13px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:14px}.contact-line:last-child{border:0}.contact-line span{color:var(--muted)}
+    .quick{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.quick a{padding:12px 15px;border-radius:8px;background:var(--navy);color:white;font-weight:700;font-size:13px}.quick a.red{background:var(--red)}
+    footer{background:#0a1924;color:#aebdc7;padding:25px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .float{position:fixed;right:18px;bottom:18px;z-index:5;display:grid;gap:9px}.float a{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;color:white;font-size:20px;box-shadow:0 5px 18px #0003}.wa{background:#20b968}.call{background:var(--red)}
+    @media(max-width:800px){.navlinks{display:none}.hero{padding:60px 0 75px}.services{grid-template-columns:1fr 1fr}.doc-grid,.contact-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.stats{grid-template-columns:1fr}.stat{padding:15px 20px}.services,.listings,.doc-list,.steps{grid-template-columns:1fr}.hero p{font-size:16px}section{padding:58px 0}.car-art{height:145px}}
+  </style>
+</head>
+<body>
+  <div class="top"><div class="wrap"><span>Pre-owned cars • Buy • Sell • Exchange</span><span>Kolkata, West Bengal · Call: 9832940347 / 8927628816</span></div></div>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#"><span class="logo">✦</span><span>ABIR AUTO WORLD<small>PRE-OWNED CAR SPECIALISTS</small></span></a>
+        <div class="navlinks"><a href="#services">Services</a><a href="#documents">Documentation</a><a href="#cars">Car listings</a><a href="#contact">Contact</a></div>
+        <a class="nav-cta" href="#contact">Get in touch ↗</a>
+      </nav>
+      <div class="hero">
+        <div class="eyebrow">Your next car starts here</div>
+        <h1>Find the right car.<br>Make your next move.</h1>
+        <p>Buy, sell or exchange pre-owned cars with Abir Auto World. Get support with vehicle paperwork and the documentation process, all in one place.</p>
+        <div class="hero-actions"><a class="btn" href="https://wa.me/919832940347?text=Hello%20Abir%20Auto%20World%2C%20I%20am%20interested%20in%20a%20car.">WhatsApp us ↗</a><a class="btn outline" href="#cars">Explore car listings ↓</a></div>
+        <div class="hero-note">Straightforward conversations · Assistance through the paperwork process</div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="wrap"><div class="stats">
+      <div class="stat"><strong>BUY</strong><span>Explore pre-owned cars</span></div>
+      <div class="stat"><strong>SELL</strong><span>Connect with interested buyers</span></div>
+      <div class="stat"><strong>EXCHANGE</strong><span>Discuss an upgrade or swap</span></div>
+    </div></div>
+    <section id="services"><div class="wrap">
+      <div class="section-head"><div class="kicker">What we do</div><h2>One place for your pre-owned car journey.</h2><p>Whether you are looking for your next car or planning to sell your current one, talk to our team about the options and process.</p></div>
+      <div class="services">
+        <article class="service"><div class="ico">🚘</div><h3>Buy pre-owned cars</h3><p>Browse available pre-owned cars and contact us for the latest price, condition, documents and inspection details.</p></article>
+        <article class="service"><div class="ico">🤝</div><h3>Sell your car</h3><p>Share your car's make, model, year, kilometres and condition. We can discuss valuation and the selling process.</p></article>
+        <article class="service"><div class="ico">🔁</div><h3>Car exchange</h3><p>Interested in changing your car? Discuss an exchange and any price difference after the vehicle assessment.</p></article>
+        <article class="service"><div class="ico">📄</div><h3>Ownership transfer</h3><p>Assistance with the paperwork and process for transferring a vehicle to its new registered owner.</p></article>
+        <article class="service"><div class="ico">🛡️</div><h3>Insurance & tax paperwork</h3><p>Guidance on checking insurance, road-tax and related vehicle records, and understanding the steps needed.</p></article>
+        <article class="service"><div class="ico">📋</div><h3>RTO documentation support</h3><p>Support with applicable RTO forms and document coordination. Requirements depend on the vehicle and transaction.</p></article>
+      </div>
+    </div></section>
+    <section class="docs" id="documents"><div class="wrap">
+      <div class="doc-grid">
+        <div class="section-head"><div class="kicker">Documentation support</div><h2>Paperwork guidance, explained clearly.</h2><p>We help customers understand and coordinate the documentation commonly involved in buying, selling and exchanging a pre-owned vehicle.</p><p class="disclaimer">The exact documents depend on the vehicle, state, RTO and transaction. Official approval, verification and statutory processing are handled by the relevant authorities. Please confirm the specific service and any applicable charges with us before proceeding.</p></div>
+        <div class="doc-list">
+          <div class="doc"><b>RC / Registration Certificate</b>Check and coordinate RC-related paperwork and ownership transfer.</div>
+          <div class="doc"><b>Form 29 & Form 30</b>Guidance on the commonly used sale and transfer forms, where applicable.</div>
+          <div class="doc"><b>Insurance documents</b>Check policy details and understand transfer or renewal requirements.</div>
+          <div class="doc"><b>PUC certificate</b>Check the Pollution Under Control certificate status and validity.</div>
+          <div class="doc"><b>Loan / hypothecation</b>Guidance on loan-closure proof and hypothecation removal paperwork, if applicable.</div>
+          <div class="doc"><b>NOC / interstate transfer</b>Information on NOC and related steps when a vehicle moves between states, if required.</div>
+          <div class="doc"><b>Tax & challan checks</b>Reminders to verify road-tax status and pending traffic challans.</div>
+          <div class="doc"><b>Buyer / seller KYC</b>Checklist for identity and address proof required for the transaction.</div>
+        </div>
+      </div>
+    </div></section>
+    <section id="cars"><div class="wrap">
+      <div class="section-head"><div class="kicker">Featured listings</div><h2>Previously advertised cars</h2><p>These examples were mentioned in earlier OLX advertisements. They are not confirmed as currently available—please contact us to check live stock, price and vehicle details.</p></div>
+      <div class="listings">
+        <article class="car"><div class="car-art">🚗</div><div class="car-body"><span class="tag">PREVIOUS OLX AD</span><h3>Honda Amaze VX · 2016</h3><div class="price">₹2,45,000</div><div class="meta"><span>⛽ Petrol</span><span>⚙ Manual</span><span>53,267 km</span><span>1st owner*</span></div><a class="btn" href="https://wa.me/919832940347?text=Hello%2C%20please%20share%20the%20current%20availability%20and%20details%20of%20the%202016%20Honda%20Amaze%20VX.">Ask about this car ↗</a></div></article>
+        <article class="car"><div class="car-art">🚙</div><div class="car-body"><span class="tag">PREVIOUS OLX AD</span><h3>Ford Figo ZXI Diesel · 2012</h3><div class="price">₹1,10,000</div><div class="meta"><span>⛽ Diesel</span><span>⚙ Manual</span><span>79,532 km</span><span>2nd owner*</span></div><a class="btn" href="https://wa.me/919832940347?text=Hello%2C%20please%20share%20the%20current%20availability%20and%20details%20of%20the%202012%20Ford%20Figo%20ZXI.">Ask about this car ↗</a></div></article>
+      </div>
+      <p class="listing-note">*Mileage, ownership and price are reproduced from the earlier advertisement details and should be independently verified. Listings may be sold, withdrawn or updated. Replace these cards with current OLX links and photos before publishing if you want live inventory.</p>
+    </div></section>
+    <section><div class="wrap">
+      <div class="section-head"><div class="kicker">How it works</div><h2>A simple process from enquiry to handover.</h2></div>
+      <div class="steps">
+        <div class="step"><div class="num">STEP 01</div><h3>Tell us what you need</h3><p>Buying, selling or exchanging? Share your requirements by phone or WhatsApp.</p></div>
+        <div class="step"><div class="num">STEP 02</div><h3>Discuss the vehicle</h3><p>Confirm availability, price, condition, inspection and vehicle history.</p></div>
+        <div class="step"><div class="num">STEP 03</div><h3>Review documents</h3><p>Go through the relevant paperwork, checks, fees and transfer requirements.</p></div>
+        <div class="step"><div class="num">STEP 04</div><h3>Complete the deal</h3><p>Proceed only after the terms, payment and handover arrangements are clear.</p></div>
+      </div>
+    </div></section>
+    <section class="contact" id="contact"><div class="wrap contact-grid">
+      <div><div class="kicker">Contact Abir Auto World</div><h2>Let's find the right deal for you.</h2><p class="lead">Call, WhatsApp or message us on Instagram for current stock, selling enquiries, exchange offers and documentation questions.</p>
+        <div class="quick"><a class="red" href="https://wa.me/919832940347">WhatsApp 9832940347</a><a href="https://wa.me/918927628816">WhatsApp 8927628816</a><a href="https://www.instagram.com/abir.autoworld/" target="_blank" rel="noopener">Instagram ↗</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-line"><b>Phone 1</b><a href="tel:+919832940347">9832940347</a></div>
+        <div class="contact-line"><b>Phone 2</b><a href="tel:+918927628816">8927628816</a></div>
+        <div class="contact-line"><b>Instagram</b><a href="https://www.instagram.com/abir.autoworld/" target="_blank" rel="noopener">@abir.autoworld ↗</a></div>
+        <div class="contact-line"><b>Google Maps</b><a href="https://www.google.com/maps/search/?api=1&query=Abir+Auto+World+Dum+Dum+Kolkata" target="_blank" rel="noopener">Get directions ↗</a></div>
+        <div class="contact-line"><b>Business area</b><span>Dum Dum, Kolkata, West Bengal</span></div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="wrap foot"><span>© <span id="year"></span> Abir Auto World. All rights reserved.</span><span>Buy · Sell · Exchange pre-owned cars</span></div></footer>
+  <div class="float"><a class="wa" aria-label="WhatsApp Abir Auto World" href="https://wa.me/919832940347">✆</a><a class="call" aria-label="Call Abir Auto World" href="tel:+919832940347">☎</a></div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
